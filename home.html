@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where World Explorer</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <img src="C:\Users\USER\Documents\WorldExplorer\Logo.jpg" height="200px" width="200px" alt=”site’s logo”><h1>Where World Explorer</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="itinerary.html">Itinerary</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="country-input" placeholder="Enter country name" aria-label="Country name input">
+            <button id="search-button">Search</button>
+        </div>
+    </header>
+    
+    <main>
+        <div id="welcome-message" class="welcome-message"></div>
+        <div class="content-container">
+            <!-- Country Info Section -->
+            <section id="country-section">
+                <h2>Country Information</h2>
+                <div id="country-info" class="info-box"></div>
+            </section>
+
+            <!-- Neighboring Countries Section -->
+            <section id="neighbors-section">
+                <h2>Neighboring Countries</h2>
+                <div id="neighbors-info" class="info-box"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Where World Explorer. All rights reserved.</p>
+    </footer>
+    
+    <script src="renderer.js"></script>
+    <script>
+        // Retrieve the username from localStorage
+        const username = localStorage.getItem('userName'); // Use the same key as in register.js
+        document.getElementById('welcome-message').innerText = username ? `Hello, ${username}!` : 'Hello, Guest!';
+    </script>
+</body>
+</html>

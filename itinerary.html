@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="itinerary.css">
+    <title>Travel Itinerary</title>
+</head>
+<body>
+    <header>
+        <h1>Personalized Your Travel Itineraries</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="itinerary.html">Itinerary</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form id="itineraryForm">
+            <input type="text" id="countryData" placeholder="Destination" required>
+            <input type="text" id="activityInput" placeholder="Activity" required />
+            <input type="date" id="dateInput" required />
+            <input type="time" id="timeInput" required />
+            <button type="submit">Add Itinerary</button>
+            <button type="button" id="btnEdit" style="display:none;">Save Changes</button>
+        </form>
+        <div id="country-info" style="margin-top: 20px; display: flex; align-items: center;">
+            <img id="country-flag" src="" alt="Country Flag" width="50" style="margin-right: 10px; display: none;">
+            <h3 id="country-name" style="display: none;"></h3>
+        </div>
+        <div id="itineraries"></div>
+    </main>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
